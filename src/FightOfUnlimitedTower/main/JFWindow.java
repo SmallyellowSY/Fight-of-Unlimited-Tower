@@ -18,7 +18,7 @@ public class JFWindow {
 		gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//gui.setResizable(false);
 		//gui.setSize(Init.SCREEN_WIDTH/2, Init.SCREEN_HEIGHT/2);
-		//µøµ¡³Ì¤j¤Æ
+		//è¦–çª—æœ€å¤§åŒ–
 		gui.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		//gui.setLocation(Init.SCREEN_WIDTH/4, Init.SCREEN_HEIGHT/4);
 		gui.setTitle("Fight of Unlimited Tower " + Init.VERSION);

@@ -1,5 +1,5 @@
 /*
- * 11002 ¦Û¥D¾Ç²ß¥Î Java side project - ´MÄ_§ð³»¾Ô Fight of Unlimited Tower
+ * 11002 è‡ªä¸»å­¸ç¿’: Java side project - å°‹å¯¶æ”»é ‚æˆ° Fight of Unlimited Tower
  *   11002 Self-directed Learning: Java side project - Fight of Unlimited Tower
  * coded by Small_yellow
  * 2022.02.14

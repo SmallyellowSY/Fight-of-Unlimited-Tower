@@ -53,7 +53,7 @@ public class MainMenu {
 	MainMenu() {
 		logo.setIcon(logo_image);
 		
-		play.setText("¶}©l¹CÀ¸");
+		play.setText("é–‹å§‹éŠæˆ²");
 		play.setFont(Init.getFont(Init.font_taipei, Font.ITALIC, 35f));
 		play.setPreferredSize(new Dimension(BUTTON_WIDTH, BUTTON_HEIGHT));
 		play.setFocusable(false);
@@ -61,7 +61,7 @@ public class MainMenu {
 			GuiInit.changeGui("gameScreen");
 		});
 		
-		options.setText("¿ï¶µ...");
+		options.setText("é¸é …...");
 		options.setFont(Init.getFont(Init.font_taipei, Font.ITALIC, 35f));
 		options.setPreferredSize(new Dimension(BUTTON_WIDTH, BUTTON_HEIGHT));
 		options.setFocusable(false);
@@ -69,7 +69,7 @@ public class MainMenu {
 			GuiInit.changeGui("options");
 		});
 		
-		exit.setText("Â÷¶}¹CÀ¸");
+		exit.setText("é›¢é–‹éŠæˆ²");
 		exit.setFont(Init.getFont(Init.font_taipei, Font.ITALIC, 35f));
 		exit.setPreferredSize(new Dimension(BUTTON_WIDTH, BUTTON_HEIGHT));
 		exit.setFocusable(false);

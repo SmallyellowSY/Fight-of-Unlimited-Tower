@@ -14,7 +14,7 @@ import java.io.FileInputStream;
 public class Init {
 	public static final int SCREEN_WIDTH = 1920;
 	public static final int SCREEN_HEIGHT = 1080;
-	public static final String VERSION = "20220314";
+	public static final String VERSION = "20220321";
 	
 	public static final Color DEFAULT_BUTTON_SELECT_COLOR = new Color(184, 207, 229);
 	

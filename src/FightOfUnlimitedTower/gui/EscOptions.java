@@ -1,6 +1,11 @@
+/*
+ * 11002 Self-directed Learning: Java side project - Fight of Unlimited Tower
+ * coded by Small_yellow
+ * 2022.03.13
+ */
+
 package FightOfUnlimitedTower.gui;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -35,17 +40,17 @@ public class EscOptions {
 		GuiInit.changeGui("gameScreen");
 	}
 	EscOptions() {
-		title.setText("¹CÀ¸¼È°±");
+		title.setText("éŠæˆ²æš«åœ");
 		title.setForeground(new Color(255, 255, 255));
 		title.setFont(Init.getFont(Init.font_taipei, Font.PLAIN, 30f));
 		
-		back.setText("ªğ¦^¹CÀ¸");
+		back.setText("è¿”å›éŠæˆ²");
 		back.setFont(Init.getFont(Init.font_taipei, Font.PLAIN, 35f));
 		back.setPreferredSize(new Dimension(LONG_BUTTON_WIDTH, BUTTON_HEIGHT));
 		back.setFocusable(false);
 		back.addActionListener(e -> backAction());
 		
-		options.setText("¿ï¶µ...");
+		options.setText("é¸é …...");
 		options.setFont(Init.getFont(Init.font_taipei, Font.PLAIN, 35f));
 		options.setPreferredSize(new Dimension(SHORT_BUTTON_WIDTH, BUTTON_HEIGHT));
 		options.setFocusable(false);
@@ -58,7 +63,7 @@ public class EscOptions {
 		none.setEnabled(false);
 		
 		
-		leave.setText("Â÷¶}¹CÀ¸");
+		leave.setText("é›¢é–‹éŠæˆ²");
 		leave.setFont(Init.getFont(Init.font_taipei, Font.PLAIN, 35f));
 		leave.setPreferredSize(new Dimension(LONG_BUTTON_WIDTH, BUTTON_HEIGHT));
 		leave.setFocusable(false);
