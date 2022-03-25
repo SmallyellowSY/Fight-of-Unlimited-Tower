@@ -84,7 +84,7 @@ public class MainMenu {
 		
 		menu.setBackground(new Color(0, 130, 250));
 		menu.setPreferredSize(new Dimension(500, -1));
-		
+		//                                                x    y
 		menu.setLayout(new FlowLayout(FlowLayout.CENTER, 100, 30));
 		menu.add(logo);
 		menu.add(play);
@@ -104,6 +104,5 @@ public class MainMenu {
 		gui.setLayout(new BorderLayout());
 		gui.add(lgwest, BorderLayout.WEST);
 		gui.add(info, BorderLayout.SOUTH);
-		
 	}
 }

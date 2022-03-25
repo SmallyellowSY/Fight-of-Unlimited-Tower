@@ -1,6 +1,6 @@
 /*
  * 11002 自主學習: Java side project - 尋寶攻頂戰 Fight of Unlimited Tower
- *   11002 Self-directed Learning: Java side project - Fight of Unlimited Tower
+ * 11002 Self-directed Learning: Java side project - Fight of Unlimited Tower
  * coded by Small_yellow
  * 2022.02.14
  * 

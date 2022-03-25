@@ -2,6 +2,7 @@
  * 11002 Self-directed Learning: Java side project - Fight of Unlimited Tower
  * coded by Small_yellow
  * 2022.03.13
+ * 
  */
 
 package FightOfUnlimitedTower.gui;
@@ -24,9 +25,10 @@ import FightOfUnlimitedTower.main.Init;
 
 public class EscOptions {
 	public static JPanel gui = new JPanel();
-	//JPanel lnorth = new JPanel();
+
 	JPanel center = new JPanel();
 	JLabel layout = new JLabel();
+	
 	JLabel title = new JLabel();
 	private final int LONG_BUTTON_WIDTH = 600;
 	private final int SHORT_BUTTON_WIDTH = (LONG_BUTTON_WIDTH - 20)/2;
@@ -39,7 +41,7 @@ public class EscOptions {
 	private void backAction() {
 		GuiInit.changeGui("gameScreen");
 	}
-	EscOptions() {
+	EscOptions() {	
 		title.setText("遊戲暫停");
 		title.setForeground(new Color(255, 255, 255));
 		title.setFont(Init.getFont(Init.font_taipei, Font.PLAIN, 30f));
@@ -55,15 +57,20 @@ public class EscOptions {
 		options.setPreferredSize(new Dimension(SHORT_BUTTON_WIDTH, BUTTON_HEIGHT));
 		options.setFocusable(false);
 		options.setEnabled(false);
+		options.addActionListener(e -> {
+			
+		});
 		
-		none.setText("");
-		none.setFont(Init.getFont(Init.font_taipei, Font.PLAIN, 35f));
+		none.setText("主畫面");
+		none.setFont(Init.getFont(Init.font_taipei, Font.ITALIC, 35f));
 		none.setPreferredSize(new Dimension(SHORT_BUTTON_WIDTH, BUTTON_HEIGHT));
 		none.setFocusable(false);
-		none.setEnabled(false);
+		//none.setEnabled(false);
+		none.addActionListener(e -> {
+			GuiInit.changeGui("mainMenu");
+		});
 		
-		
-		leave.setText("離開遊戲");
+		leave.setText("回到主畫面");
 		leave.setFont(Init.getFont(Init.font_taipei, Font.PLAIN, 35f));
 		leave.setPreferredSize(new Dimension(LONG_BUTTON_WIDTH, BUTTON_HEIGHT));
 		leave.setFocusable(false);
