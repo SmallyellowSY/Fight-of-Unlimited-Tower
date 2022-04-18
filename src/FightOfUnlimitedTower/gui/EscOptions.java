@@ -42,7 +42,7 @@ public class EscOptions {
 		GuiInit.changeGui("gameScreen");
 	}
 	EscOptions() {	
-		title.setText("遊戲暫停");
+		title.setText("遊戲目錄");
 		title.setForeground(new Color(255, 255, 255));
 		title.setFont(Init.getFont(Init.font_taipei, Font.PLAIN, 30f));
 		
@@ -93,7 +93,6 @@ public class EscOptions {
 		gui.getActionMap().put("esc", new AbstractAction() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				System.out.println("-ESC Event ");
 				backAction();
 			}
 		});

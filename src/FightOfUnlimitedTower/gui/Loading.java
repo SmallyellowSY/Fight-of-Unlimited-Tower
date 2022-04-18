@@ -52,16 +52,18 @@ public class Loading {
 	}
 	
 	public static void load() {
+		
 		while(loadProgress <= MAX) {
 			loadBar.setValue(loadProgress);
 			loadProgress +=1;
 			
-			try {Thread.sleep(50);}
+			try {Thread.sleep(1);}
 			catch (InterruptedException e) {e.printStackTrace();}
 		}
-
+		
 		int[] dimension = {gui.getSize().width, gui.getSize().height};
 		Init.setScreenSize(dimension);
 		GuiInit.load(1);
+		//System.out.println(dimension[0] + "-" + dimension[1]);
 	}
 }
