@@ -25,6 +25,13 @@ public class Player {
 			die();
 		}
 	}
+	//treat 治療
+	public static void treat() {
+		if(HP <= LevelManager.getBar("playerHP").getMaximum()) {
+			HP += 10;
+			LevelManager.setBarValue("playerHP", HP);
+		}
+	}
 	
 	private static void die() {
 		LevelManager.getBar("playerHP").setString("Death");

@@ -15,7 +15,7 @@ public class Init {
 	//public static final int SCREEN_WIDTH = 1920;
 	//public static final int SCREEN_HEIGHT = 1001;
 	
-	public static final String VERSION = "20220418";
+	public static final String VERSION = "20220422";
 	
 	public static final Color DEFAULT_BUTTON_SELECT_COLOR = new Color(184, 207, 229);
 	
@@ -25,7 +25,7 @@ public class Init {
 	
 	public static Font font_taipei;
 	
-	
+
 	public static void inits() {
 		try {
 			font_taipei = Font.createFont(Font.TRUETYPE_FONT, new FileInputStream(FONT_PATH));

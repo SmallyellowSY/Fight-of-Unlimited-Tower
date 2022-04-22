@@ -40,7 +40,11 @@ public class GameScreen {
 	JLabel monsterImage = new JLabel();
 	
 	JButton startGame = new JButton();
-
+	
+	JLabel dimensionText = new JLabel();
+	JLabel playerHPtext = new JLabel();
+	JLabel monsterHPtext = new JLabel();
+	static JProgressBar dimensionBar = new JProgressBar(0, 100);
 	static JProgressBar playerHPbar = new JProgressBar(0, LevelManager.playerHP);
 	static JProgressBar monsterHPbar = new JProgressBar(0, LevelManager.monsterHP);
 	
@@ -55,33 +59,47 @@ public class GameScreen {
 	}
 	
 	GameScreen() {
-		
 		level.setFont(Init.getFont(Init.font_taipei, Font.ITALIC, 50f));
 		level.setText("LEVEL: 1");
 		level.setBackground(Color.orange);
 		//level.setOpaque(true);
 		
-		//playerHPbar.setPreferredSize(new Dimension(1000, 60));
+		dimensionText.setText("距         離:");
+		dimensionText.setFont(Init.getFont(Init.font_taipei, Font.PLAIN, 35f));
+		dimensionBar.setString("COMING SOON");
+		dimensionBar.setStringPainted(true);
+		dimensionBar.setFont(Init.getFont(Init.font_taipei, Font.ITALIC, 30f));
+		dimensionBar.setForeground(new Color(0, 255, 0));
+		dimensionBar.setBackground(new Color(0, 100, 0));
+		
+		playerHPtext.setText("玩家血量:");
+		playerHPtext.setFont(Init.getFont(Init.font_taipei, Font.PLAIN, 35f));
+		playerHPbar.setPreferredSize(new Dimension(1000, 60));
 		playerHPbar.setStringPainted(true);
 		playerHPbar.setFont(Init.getFont(Init.font_taipei, Font.ITALIC, 30f));
 		playerHPbar.setForeground(Color.red);
 		playerHPbar.setBackground(Color.black);
 		
-		//monsterHPbar.setPreferredSize(new Dimension(1000, 60));
+		monsterHPtext.setText("怪物血量:");
+		monsterHPtext.setFont(Init.getFont(Init.font_taipei, Font.PLAIN, 35f));
+		monsterHPbar.setPreferredSize(new Dimension(1000, 60));
 		monsterHPbar.setStringPainted(true);
 		monsterHPbar.setFont(Init.getFont(Init.font_taipei, Font.ITALIC, 30f));
 		monsterHPbar.setForeground(Color.red);
 		monsterHPbar.setBackground(Color.black);
+		
 		
 		monster.setPreferredSize(new Dimension(-1, MONSTER_HEIGHT));
 		monster.setLayout(null);
 		monster.setBackground(Color.green);
 		
 		level.setBounds(100, 50, 220, 50);
-		monsterHPbar.setBounds((Init.SCREEN_WIDTH - 1000) / 2, MONSTER_HEIGHT - 100, 1000, 60);
+		monsterHPtext.setBounds((Init.SCREEN_WIDTH - 990) / 2, MONSTER_HEIGHT - 150, 160, 45);
+		monsterHPbar.setBounds((Init.SCREEN_WIDTH - 1000) / 2, MONSTER_HEIGHT - 105, 1000, 60);
 		monster.add(level);
+		monster.add(monsterHPtext);
 		monster.add(monsterHPbar);
-		
+		// - - -
 		startGame.setText("Start");
 		startGame.setBounds(100, 100, 100, 30);
 		startGame.setFocusable(false);
@@ -90,12 +108,18 @@ public class GameScreen {
 			startGame.setEnabled(false);
 		});
 		monster.add(startGame);
+		// - - -
 		
 		player.setPreferredSize(new Dimension(-1, PLAYER_HEIGHT));
 		player.setLayout(null);
 		player.setBackground(Color.yellow);
-		
-		playerHPbar.setBounds((Init.SCREEN_WIDTH - 1000) / 2, PLAYER_HEIGHT - 120, 1000, 60);
+		dimensionText.setBounds((Init.SCREEN_WIDTH - 990) / 2, PLAYER_HEIGHT - 305, 160, 45);
+		dimensionBar.setBounds((Init.SCREEN_WIDTH - 1000) / 2, PLAYER_HEIGHT - 260, 1000, 60);
+		playerHPtext.setBounds((Init.SCREEN_WIDTH - 990) / 2, PLAYER_HEIGHT - 170, 160, 45);
+		playerHPbar.setBounds((Init.SCREEN_WIDTH - 1000) / 2, PLAYER_HEIGHT - 125, 1000, 60);
+		player.add(dimensionText);
+		player.add(dimensionBar);
+		player.add(playerHPtext);
 		player.add(playerHPbar);
 		
 		gui.setLayout(new BorderLayout());
@@ -115,6 +139,13 @@ public class GameScreen {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				Player.attack();
+			}
+		});
+		gui.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_H, 0), "treat");
+		gui.getActionMap().put("treat", new AbstractAction() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Player.treat();
 			}
 		});
 		
